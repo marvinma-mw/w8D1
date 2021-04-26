@@ -20,7 +20,7 @@ function inOrderArray(root) {
 
 // Implement a function that takes the root of a Binary Tree
 // and returns an array containing the values from a post-order
-// traversal.
+// traversal. left-right-self
 function postOrderArray(root) {
     // Your code here
     if(!root) return [];

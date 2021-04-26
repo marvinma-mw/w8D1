@@ -3,7 +3,30 @@
 // order, and returns an array containing the values
 // in the order you visited them.
 function bfs(root){
-    // Your code here
+    if (!root) return [];
+
+
+    let arr1 = [root];
+    let arr2 = [];
+
+
+    while(arr1.length) {
+        let node = arr1.shift() //a
+        
+        arr2.push(node.val)
+
+        if (node.left){
+            arr1.push(node.left);
+        }
+
+        if (node.right) {
+                arr1.push(node.right)
+            }
+        }
+        return arr2
 }
+
+
+
 
 module.exports = { bfs };

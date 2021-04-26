@@ -3,7 +3,12 @@
 // order, and returns an array containing the values
 // in the order you visited them.
 function dfs(root){
-    // Your code here
+   if (!root) return [];
+
+   //pre-order (self, left, right)
+   return [
+        root.val, ...dfs(root.left), ...dfs(root.right)
+   ]
 }
 
 module.exports = { dfs };
