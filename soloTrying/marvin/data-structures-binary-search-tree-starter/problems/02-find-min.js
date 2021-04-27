@@ -6,37 +6,39 @@ const { BST } = require("./01-bst");
 
 // You may use your BST implementation to test this out.
 function findMin(root) {
-    // Your code here
-    // let newNode = new BST(root);
 
-    // if(!newNode.root) return null;
+// iteratively
+  if (!root) return null;
 
-    // let min = newNode.root;
+  let min = root;
 
-    // while (min.left!== null){
-    //   min = min.left;
-    // }
+  while (min.left !== null){
+    min = min.left;
+ }
 
-    // return min.val;
+ return min;
 
+ // recursive method
 
-    // if(!newNode.root) return null;
+  // if(!root)return null;
 
-    // if(newNode.left){
-    //   return findMin(newNode.left)
-    // }
-    // return newNode.val;
+  // if(root.left) return findMin(root.left);
 
-
-    if(!root){
-      return null;
-   }
-   if(root.left){
-     return minNode(root.left)
-  }
-  return root.value
+  // return root;
 }
 
+
+function findMax(root) {
+
+  if (!root) return null;
+  let max = root;
+
+  while(max.right !== null){
+    max = max.right;
+  }
+
+  return max;
+}
 
 
 module.exports = {

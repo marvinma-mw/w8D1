@@ -2,7 +2,11 @@
 // binary search tree and returns the height.
 // You may use your BST implementation to test this out.
 function getHeight(root) {
+  if(!root) return -1;
+  var leftHeight = getHeight(root.left);
+  var rightHeight = getHeight(root.right);
 
+  return Math.max(leftHeight, rightHeight) + 1;
 }
 
 
