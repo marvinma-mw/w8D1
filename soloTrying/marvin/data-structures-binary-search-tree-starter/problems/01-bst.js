@@ -71,6 +71,51 @@ class BST {
 }
 }
 
+
+
+function getHeight(root) {
+    if(!root) return -1;
+    let leftHeight = getHeight(root.left);
+    console.log(leftHeight);
+    let rightHeight = getHeight(root.right);
+    console.log(rightHeight);
+    return Math.max(leftHeight, rightHeight) + 1;
+  }
+
+//   let a = new TreeNode('a');
+//   let b = new TreeNode('b');
+//   let c = new TreeNode('c');
+//   let d = new TreeNode('d');
+//   let e = new TreeNode('e');
+//   let f = new TreeNode('f');
+//   let g = new TreeNode('g');
+
+//   a.left = b;
+//   a.right = c;
+//   b.left = d;
+//   b.right = e;
+//   c.left = f;
+//   c.right = g;
+
+//   console.log(getHeight(b));
+
+
+
+let tree = new BST();
+tree.insert(10);
+tree.insert(5);
+tree.insert(16);
+tree.insert(1);
+tree.insert(7);
+tree.insert(16);
+
+
+console.log(tree)
+
+
+
+
+
 module.exports = {
     TreeNode,
     BST

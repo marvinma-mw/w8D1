@@ -4,11 +4,11 @@
 function getHeight(root) {
   if(!root) return -1;
   let leftHeight = getHeight(root.left);
+  debugger;
   let rightHeight = getHeight(root.right);
 
   return Math.max(leftHeight, rightHeight) + 1;
 }
-
 
 module.exports = {
   getHeight
