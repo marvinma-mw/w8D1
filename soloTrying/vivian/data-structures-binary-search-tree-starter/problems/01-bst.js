@@ -67,7 +67,7 @@ class BST {
 
         if (val < currentNode.val) {
             return this.searchRecur(val, currentNode.left)
-        } else if (val > currentNode.val_)
+        } else if (val > currentNode.val)
     }
 
     // Perform an iterative search through the binary search tree
