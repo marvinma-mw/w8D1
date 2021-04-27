@@ -63,7 +63,8 @@ class BST {
             if (node.left) stack.push(node.left);
             if (node.right) stack.push(node.right)
             }
-        if(nodes.includes(val)){return true
+
+        if(nodes.includes(val)){return true;
         }else{
             return false;
         }
