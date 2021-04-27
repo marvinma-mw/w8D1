@@ -12,7 +12,7 @@ function bfs(root){
 
     while(arr1.length) {
         let node = arr1.shift() //a
-        
+
         arr2.push(node.val)
 
         if (node.left){
