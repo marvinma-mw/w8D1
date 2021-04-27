@@ -14,9 +14,11 @@ class BST {
 
     // Insert a node into the binary search tree
     insert(val, currentNode=this.root) {
-        if (!currentNode) {
-            currentNode = new TreeNode(val)
-            return;
+        if (!this.root) {
+            this.root = new TreeNode(val)
+            return; //the return is needed so that the other conditionals doesn't check
+            //for new Nodes. That's why you need a return whenever we're creating a new Node
+            //to prevent the domino effect
         }
 
         if (val < currentNode.val) {
