@@ -63,11 +63,15 @@ class BST {
 
     // Perform a recursive search through the binary search tree
     searchRecur(val, currentNode=this.root) {
-        if (!root) return false
+        if (!currentNode) return false;
 
         if (val < currentNode.val) {
-            return this.searchRecur(val, currentNode.left)
-        } else if (val > currentNode.val)
+            return this.searchRecur(val, currentNode.left);
+        } else if (val > currentNode.val) {
+            return this.searchRecur(val, currentNode.right);
+        } else {
+            return true;
+        }
     }
 
     // Perform an iterative search through the binary search tree
